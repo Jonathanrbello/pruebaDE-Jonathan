@@ -1,0 +1,22 @@
+CREATE DATABASE coppel;
+
+CREATE TABLE registro_llamadas (
+  id SERIAL PRIMARY KEY,
+  fecha_hora TIMESTAMP NOT NULL,
+  motivo_error TEXT,
+  tiempo_respuesta DECIMAL(10, 2),
+  exitoso BOOLEAN,
+  timeout_configurado DECIMAL(10, 2)
+);
+
+CREATE TABLE divisas (
+  id SERIAL PRIMARY KEY,
+  fecha_hora timestamp NOT NULL,
+  divisa_codigo text,
+  divisa_nombre text,
+  divisa_simbolo text,
+  divisa_decimal_digits integer,
+  divisa_rounding integer,
+  divisa_name_plural text
+);
+
